@@ -1,0 +1,89 @@
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+#first, #second {
+    background-color: rgb(15, 201, 56);
+}
+
+#first {
+    color: white;
+    padding: 15px 15px 0 15px;
+    text-align: center;
+    position: relative;
+}
+
+#first p {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#first img {
+    height: 25px;
+}
+
+#second {
+    /* top -> right -> bottom -> left */
+    padding: 0 15px 15px 15px;
+    position: relative;
+}
+
+#second input {
+    width: 100%;
+    /* 2.0배 크기 */
+    height: 2em;
+}
+
+#second ul {
+    position: absolute;
+    top: 2px;
+    right: 20px;
+}
+
+#second ul li {
+    float: left;
+    padding: 0 8px;
+    font-size: 1.2em;
+}
+
+#third ul {
+    /* display: flex - 레이아웃을 격자형으로 변경 */
+    display: flex;
+}
+
+#third ul li {
+    /* 부모 개체가 display: flex 라면, 가로 크기를 기준으로 각 li 태그의 가중치를 부여 */
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: .8em;
+    font-weight: bold;
+    /* 모양, 굵기, 색상 순서 */
+    /* 모양은 solid(단선), dotted(점선), double(이중선) 등이 있음 */
+    border-bottom: solid 1px rgb(15, 201, 56);
+}
+
+#third ul li.active {
+    color: rgb(15, 201, 56);
+    /* text-decoration: underline; */
+    border-bottom: solid 3px rgb(15, 201, 56);
+}
+
+/* #third ul li.more {
+    border-left: solid 1px #eeeeee;
+} */
+
+/* 가상 선택자 사용: 해당 타입 중 마지막 타입을 선택 */
+#third ul li:last-of-type {
+    border-left: solid 1px rgb(15, 201, 56);
+}
+
+/* .bg-green {
+    background-color: green;
+} */
